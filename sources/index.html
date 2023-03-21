@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>OBLIK 3D Furniture Configurator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="experience"></div>
+        <div class="container">
+            <!-- nav -->
+            <div class="nav">
+              <div class="logo">OBLIK's 3D Configurator</div>
+              <div class="back">
+                <ion-icon name="arrow-forward-sharp"></ion-icon>
+              </div>
+            </div>
+      
+            <!-- hero -->
+            <div class="product-hero">
+              <div class="product-header">
+                <p>
+                  POLYGON is an armchair born from the modernist seating typology with small dimensions.
+                  It meets the functional parameters, but due to its size and immobility it does not 
+                  take up unnecessary areas.
+                </p>
+              </div>
+              <div class="product">
+                <div class="product-title">
+                  <h1>Polygon Collection</h1>
+                  <br />Manufacturer: <span>PROSTORIA.</span>
+                </div>
+                <div class="product-look">
+                  <img src="../public/assets/product.png" alt="" />
+                </div>
+              </div>
+            </div>
+      
+            <!-- overlay -->
+            <div class="overlay"></div>
+      
+            <!-- product description -->
+            <div class="product-description">
+              <div class="desc">
+                <p>
+                  With the change in perspective, the triangles that define the orthogonal side view of the chair transform into hexagons and other complex polygons.
+                  The result is a product that looks familiar, even a little dated, but is at the same time decidedly modern.
+                  The construction of bent steel rods further accentuates the duality of the polygon.
+                  
+                </p>
+                <div class="link"><span>Download PDF</span></div>
+              </div>
+              <div class="front-view view">
+                <div class="sketch-img"><img src="/assets/front-view.png" alt="" /></div>
+                <br />
+                <div class="sketch-title">
+                  <span>Front View</span> <br />Dimensions
+                </div>
+              </div>
+              <div class="side-view view">
+                <div class="sketch-title">
+                  <span>Side View</span> <br />Dimensions
+                </div>
+                <br />
+                <div class="sketch-img"><img src="/assets/side-view.png" alt="" /></div>
+                <div class="sketch-img"><img src="/assets/measures.png" alt="" /></div>
+              </div>
+              <div class="close-desc" id="close">
+                <ion-icon name="close-sharp"></ion-icon>
+              </div>
+            </div>
+      
+            <!-- footer -->
+            <div class="product-info">
+              <div class="product-nav">
+                <div class="product-img">
+                  <img src="/assets/product.png" alt="" />
+                </div>
+                <div class="product-name">Polygon Chair<br /><span>by Prostoria</span></div>
+                <div class="product-variants"> Color & Materials Variants Available</div>
+                <div class="product-nav-links">
+                  <button id="measurements">Measurements</button>
+                  <button>More info +</button>
+                </div>
+              </div>
+              <div class="product-cart">
+                <div class="product-price">€450</div>
+                <div class="product-btn"><button>Configure Now</button></div>
+              </div>
+            </div>
+          </div>
+
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+          <script type="module" src="./index.js"></script>
+          <script>
+            const tl = gsap.timeline({ paused: true });
+        
+            function showInfo() {
+              revealDescription();
+        
+              const showBtn = document.getElementById("measurements");
+              showBtn.onclick = function (e) {
+                tl.reversed(!tl.reversed());
+              };
+        
+              const closeBtn = document.getElementById("close");
+              closeBtn.onclick = function (e) {
+                tl.reversed(!tl.reversed());
+              };
+            }
+        
+            showInfo();
+        
+            function revealDescription() {
+              tl.to(".product-description", 1, {
+                bottom: 0,
+                ease: "power2.inOut",
+              });
+        
+              tl.to(
+                ".overlay",
+                1,
+                {
+                  opacity: 1,
+                  ease: "power2.inOut",
+                },
+                "-=1"
+              );
+        
+              tl.to(
+                ".product-hero",
+                1,
+                {
+                  bottom: "55vh",
+                  ease: "power2.inOut",
+                },
+                "-=0.9"
+              ).reverse();
+            }
+        
+            gsap.from(".nav > *", 1, {
+              y: 60,
+              opacity: 0,
+              ease: "power4.inOut",
+              stagger: {
+                amount: 0.2,
+              },
+            });
+        
+            gsap.from(".product-hero > div, .product-info", 1, {
+              y: 60,
+              opacity: 0,
+              ease: "power4.inOut",
+              stagger: {
+                amount: 0.4,
+              },
+            });
+        
+            gsap.from(".product-look img", 2, {
+              x: 100,
+              opacity: 0,
+              ease: "power3.inOut",
+              delay: 0.5,
+              stagger: {
+                amount: 0.4,
+              },
+            });
+          </script>
+    </body>
+</html>

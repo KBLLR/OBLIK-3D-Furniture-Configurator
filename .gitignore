@@ -1,0 +1,30 @@
+# Vite generated files\
+dist/\
+\
+# Node modules\
+node_modules/\
+\
+# Dependency directories\
+.pnp/\
+.pnp.js\
+\
+# System and editor files\
+.DS_Store\
+Thumbs.db\
+*.log\
+*.bak\
+*.swp\
+*.swo\
+*.tmp\
+*.sublime*\
+*.vscode/\
+\
+# Lock files\
+package-lock.json\
+yarn.lock\
+\
+# Environment files\
+.env\
+.env.local\
+.env.*.local\
+}
