@@ -34,17 +34,21 @@ export default class World
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture06, transparent: true, opacity: 1 }),
         ];
 
-        materials[0].blending = THREE.NormalBlending;
-        materials[1].blending = THREE.NormalBlending;
-        materials[2].blending = THREE.NormalBlending;
-        materials[3].blending = THREE.NormalBlending;
-        materials[4].blending = THREE.NormalBlending;
-        materials[5].blending = THREE.NormalBlending;
+        // materials[0].blending = THREE.NormalBlending;
+        // materials[1].blending = THREE.NormalBlending;
+        // materials[2].blending = THREE.NormalBlending;
+        // materials[3].blending = THREE.NormalBlending;
+        // materials[4].blending = THREE.NormalBlending;
+        // materials[5].blending = THREE.NormalBlending;
     
         // Create a cube geometry and apply the materials
         const geometry = new THREE.BoxGeometry();
         const cube = new THREE.Mesh(geometry, materials);
-    
+
+        // Position the cube
+        cube.position.set(0, 0, 0)  // x, y, z
+
+        // Add the cube to the scene
         this.scene.add(cube)
     }
 
