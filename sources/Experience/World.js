@@ -41,6 +41,7 @@ export default class World
 
       // Position the cube
       this.cube.position.set(0, 0, 0)  // x, y, z
+      this.cube.scale.set(6, 6, 6)    // x, y, z
       
       // Add the cube to the scene
       this.scene.add(this.cube)
@@ -53,8 +54,8 @@ export default class World
     update()
     {
       if (this.cube) {
-        this.cube.rotation.x += 0.01;
-        this.cube.rotation.y += 0.01;
+        //this.cube.rotation.x += 0.001;
+        this.cube.rotation.y += 0.001;
       }
     }
 
