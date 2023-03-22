@@ -107,6 +107,7 @@ body
   
     .product-title h1 {
       font-size: 40px;
+      line-height: 140%;
       padding: 0;
     }
   
