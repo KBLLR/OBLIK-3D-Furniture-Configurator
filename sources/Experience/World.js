@@ -26,21 +26,20 @@ export default class World
       createTexturedCube() {
         // Create materials for each face
         const materials = [
-          //new THREE.MeshBasicMaterial({color: 0xff0000}),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture01 }),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture02 }),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture03 }),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture04 }),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture05 }),
-          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture06 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture01, transparent: true, opacity: 1 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture02, transparent: true, opacity: 1 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture03, transparent: true, opacity: 1 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture04, transparent: true, opacity: 1 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture05, transparent: true, opacity: 1 }),
+          new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture06, transparent: true, opacity: 1 }),
         ];
 
-        materials[0].blending = THREE.SubtractiveBlending;
-        materials[1].blending = THREE.SubtractiveBlending;
-        materials[2].blending = THREE.SubtractiveBlending;
-        materials[3].blending = THREE.SubtractiveBlending;
-        materials[4].blending = THREE.SubtractiveBlending;
-        materials[5].blending = THREE.SubtractiveBlending;
+        materials[0].blending = THREE.NormalBlending;
+        materials[1].blending = THREE.NormalBlending;
+        materials[2].blending = THREE.NormalBlending;
+        materials[3].blending = THREE.NormalBlending;
+        materials[4].blending = THREE.NormalBlending;
+        materials[5].blending = THREE.NormalBlending;
     
         // Create a cube geometry and apply the materials
         const geometry = new THREE.BoxGeometry();
