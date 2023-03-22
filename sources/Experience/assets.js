@@ -4,11 +4,10 @@ export default [
         data: {},
         items:
         [
-            { name: 'front-view', source: '/assets/front-view.png', type: 'texture' },
-            { name: 'product', source: '/assets/product.png', type: 'texture' },
-            { name: 'side-view', source: '/assets/side-view.png', type: 'texture' },
-            { name: 'measures', source: '/assets/measures.png', type: 'texture' },
-            { name: 'polygon_chair', source: '/assets/glb/polygon_chair.glb', type: 'gltf' },
+            { name: 'front-view', source: '/assets/front-view.png', type: 'imgFurniture' },
+            { name: 'product', source: '/assets/product.png', type: 'imgFurniture' },
+            { name: 'side-view', source: '/assets/side-view.png', type: 'imgFurniture' },
+            { name: 'measures', source: '/assets/measures.png', type: 'imgFurniture' }
         ]
     },
     {
@@ -22,6 +21,14 @@ export default [
             { name: 'OBLIKtexture04', source: '/assets/OBLIKcube/OBLIK-04.png', type: 'texture' },
             { name: 'OBLIKtexture05', source: '/assets/OBLIKcube/OBLIK-05.png', type: 'texture' },
             { name: 'OBLIKtexture06', source: '/assets/OBLIKcube/OBLIK-06.png', type: 'texture' },
+        ]
+    },
+    {
+        name: 'polygon_chair',
+        data: {},
+        items:
+        [
+            { name: 'polygon_chair', source: '/assets/glb/polygon_chair.glb', type: 'gltf' },
         ]
     },
 ]

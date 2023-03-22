@@ -20,14 +20,13 @@ export default class World
             }
         })
 
-        const textureAssets = assets[0].items.filter((asset) => asset.type === 'texture');
-        this.resources.load(textureAssets);
+        //const textureAssets = assets[0].items.filter((asset) => asset.type === 'texture');
       }
 
-    
       createTexturedCube() {
         // Create materials for each face
         const materials = [
+          //new THREE.MeshBasicMaterial({color: 0xff0000}),
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture01 }),
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture02 }),
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture03 }),
@@ -35,6 +34,13 @@ export default class World
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture05 }),
           new THREE.MeshBasicMaterial({ map: this.resources.items.OBLIKtexture06 }),
         ];
+
+        materials[0].blending = THREE.SubtractiveBlending;
+        materials[1].blending = THREE.SubtractiveBlending;
+        materials[2].blending = THREE.SubtractiveBlending;
+        materials[3].blending = THREE.SubtractiveBlending;
+        materials[4].blending = THREE.SubtractiveBlending;
+        materials[5].blending = THREE.SubtractiveBlending;
     
         // Create a cube geometry and apply the materials
         const geometry = new THREE.BoxGeometry();
