@@ -12,81 +12,27 @@ body
     color: #fff;
 }
 
-/* configurator COMPONENT */
-
-.conf-component {
-  width: 100%;
-  height: 1024px;
-  background: rgba(255,255,255,0.2);
-  opacity: 1;
+#card {
   position: absolute;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.conf-component-left{
-  width: 834px;
-  height: 924px;
-  /* background: url("../images/v138_125.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 100px;
-  left: 0px;
-  overflow: hidden;
-}
-.v138_126 {
-  width: 500px;
-  height: 614px;
-  /* background: url("../images/v138_126.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 155px;
-  left: 167px;
-  overflow: hidden;
-}
-.v138_127 {
-  width: 491px;
-  height: 534px;
-  /* background: url("../images/v138_127.png"); */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 39px;
-  left: 5px;
+  z-index: 1000;
+  width: 50%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 
-.v138_132 {
-  width: 834px;
-  height: 100px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+model-viewer {
+  position: relative;
+  display: flex
 }
-.v138_133 {
-  width: 372px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 33px;
-  left: 40px;
-  font-family: Brown;
-  font-weight: Regular;
-  font-size: 35px;
-  opacity: 1;
-  text-align: left;
-}
+
 .conf-panel {
   width: 606px;
   height: 1024px;
@@ -239,6 +185,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    touch-action: none;
   }
   
   .product > * {

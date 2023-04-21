@@ -7,28 +7,35 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-      <!-- configurator -->
-      <div class="conf-component">
-        <div class="conf-component-left">
-            <div class="v138_126">
-                <div class="v138_127"></div>
-            </div>
-        </div>
-
-        <div class="v138_132">
-            <span class="v138_133">Polygon Easy Chair</span>
-        </div>
-        <div class="conf-panel">
-            <div class="conf-panel-wrapper">
-                <div class="name"></div>
-                <div class="name"></div>
-                <div class="name"></div>
-            </div>
-        <div class="name"></div>
-        <div class="name"></div>
-    <span class="title">Configuration</span>
-        </div>
+      <div class="logo">
+      <svg width="350px" height="88px" viewBox="0 0 750 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+          <title>OBLIK</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="3" transform="translate(-46.000000, -200.000000)" fill="#000AFF">
+                  <g id="Group" transform="translate(46.000000, 181.000000)">
+                      <path d="M608.106958,211.599826 L635.134204,211.599826 L635.134204,128.049479 L714.86458,211.599826 L750,211.599826 L671.080441,127.506944 L750,21.7126736 L717.837577,21.7126736 L652.701914,108.518229 L635.134204,89.2582465 L635.134204,21.7126736 L608.106958,21.7126736 L608.106958,211.599826 Z M532.430668,211.599826 L559.457915,211.599826 L559.457915,21.7126736 L532.430668,21.7126736 L532.430668,211.599826 Z M418.919613,21.7126736 L391.892367,21.7126736 L391.892367,211.599826 L502.704076,211.599826 L502.704076,185.829427 L418.919613,185.829427 L418.919613,21.7126736 Z M291.080738,47.4830729 C308.107904,47.4830729 316.216077,51.280816 322.162072,57.2486979 C327.567521,62.9453125 331.081063,70.812066 331.081063,79.4926215 C331.081063,88.1731771 327.567521,95.7686632 322.162072,101.465278 C316.216077,107.43316 308.107904,111.230903 291.080738,111.230903 L249.999324,111.230903 L249.999324,47.4830729 L291.080738,47.4830729 Z M282.43202,137.001302 C297.567278,137.001302 304.053817,139.985243 308.378176,144.868056 C312.432263,149.208333 314.864715,154.904948 314.864715,161.415365 C314.864715,167.925781 312.432263,173.622396 308.378176,177.962674 C304.053817,182.845486 297.567278,185.829427 282.43202,185.829427 L249.999324,185.829427 L249.999324,137.001302 L282.43202,137.001302 Z M222.972078,21.7126736 L222.972078,211.599826 L287.296924,211.599826 C305.675451,211.599826 317.297167,206.445747 326.216159,198.307726 C335.945967,189.355903 341.891961,176.335069 341.891961,162.229167 C341.891961,149.208333 335.945967,136.730035 327.026976,128.320747 C344.864958,119.368924 358.108309,99.8376736 358.108309,78.4075521 C358.108309,60.7751736 350.000135,44.7703993 337.297329,34.4622396 C327.567521,26.3242187 315.134988,21.7126736 295.945643,21.7126736 L222.972078,21.7126736 Z M0,116.65625 C0,171.994792 41.0814142,214.3125 94.5953616,214.3125 C148.109309,214.3125 189.190723,171.994792 189.190723,116.65625 C189.190723,61.3177083 148.109309,19 94.5953616,19 C41.0814142,19 0,61.3177083 0,116.65625 Z M27.0272462,116.65625 C27.0272462,75.6948785 55.9463996,44.7703993 94.5953616,44.7703993 C133.244324,44.7703993 162.163477,75.6948785 162.163477,116.65625 C162.163477,157.888889 133.244324,188.542101 94.5953616,188.542101 C55.9463996,188.542101 27.0272462,157.888889 27.0272462,116.65625 Z" id="OBLIK"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
     </div>
+
+      <div id="card">
+        <model-viewer
+        camera-controls touch-action="pan-y" 
+        src="https://cdn.glitch.com/21710700-a398-4f93-9a6c-eb0810904e74/industrial_lamp.gltf?v=1569485480008"
+                      ios-src="https://cdn.glitch.com/21710700-a398-4f93-9a6c-eb0810904e74/industrial_floor_lamp.usdz?v=1569485305204"
+                      alt="Polygon chair"
+                      shadow-intensity="1"
+                      interaction-prompt="auto"
+                      auto-rotate ar magic-leap
+                      quick-look-browsers="safari chrome"
+        style="background-color: unset">
+        </model-viewer>
+      </div>
 
       <!-- hero -->
       <div class="product-hero">
@@ -51,7 +58,9 @@
       </div>
 
         <div class="experience"></div>
+
         <div class="container">
+
             <!-- nav -->
             <div class="nav">
               <div class="logo">OBLIK's 3D Configurator</div>
@@ -134,6 +143,15 @@
             </div>
           </div>
 
+           <!-- Loads <model-viewer> for modern browsers: -->
+          <script type="module"
+            src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer.js">
+          </script>
+
+          <!-- Loads <model-viewer> for old browsers like IE11: -->
+          <script nomodule
+              src="https://unpkg.com/@google/model-viewer@v0.6.0/dist/model-viewer-legacy.js">
+          </script>
           <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
           <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
